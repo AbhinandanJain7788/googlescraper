@@ -77,6 +77,7 @@ JOBS: dict[str, Job] = {}
 
 
 async def _run_scrape(job: Job) -> None:
+    print(f"[scrape {job.id[:8]}] STARTING — keywords={job.keywords} locations={job.locations} max={job.max_results}", flush=True)
     job.status = "running"
     storage.update_job(job.id, status="running")
     loop = asyncio.get_running_loop()
@@ -118,7 +119,11 @@ async def _run_scrape(job: Job) -> None:
                 card_workers=job.card_workers,
             )
         job.status = "cancelled" if job.cancel_event.is_set() else "done"
+        print(f"[scrape {job.id[:8]}] FINISHED — status={job.status} results={len(job.results)}", flush=True)
     except Exception as e:  # surface to client
+        import traceback
+        print(f"[scrape {job.id[:8]}] EXCEPTION: {type(e).__name__}: {e}", flush=True)
+        print(traceback.format_exc(), flush=True)
         job.status = "error"
         job.error = f"{type(e).__name__}: {e}"
         await job.queue.put({"type": "error", "data": job.error})
