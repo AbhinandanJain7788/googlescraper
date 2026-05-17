@@ -8,7 +8,7 @@
 #   and breaks every time Playwright bumps a dep; the official image is faster
 #   and more reliable.
 
-FROM mcr.microsoft.com/playwright/python:v1.45.0-jammy
+FROM mcr.microsoft.com/playwright/python:v1.59.0-jammy
 
 # Avoid pyc files and force flushed stdout/stderr so Railway logs are usable.
 ENV PYTHONDONTWRITEBYTECODE=1 \
