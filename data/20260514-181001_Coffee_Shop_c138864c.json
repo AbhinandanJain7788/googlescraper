@@ -1,0 +1,112 @@
+{
+  "keyword": "Coffee Shop",
+  "location": "Bandra, Mumbai",
+  "max_results": 5,
+  "results": [
+    {
+      "title": "Bombay Coffee House",
+      "totalScore": 4.2,
+      "reviewsCount": 3183,
+      "street": "Neelkamal Building, 248, Waterfield Road, opposite National College, Khar, Bandra West",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "postalCode": "400050",
+      "countryCode": null,
+      "website": "bombaycoffeehouse.com",
+      "phone": "077180 42147",
+      "categories": [
+        "Cafe"
+      ],
+      "categoryName": "Cafe",
+      "plusCode": "3R7M+7W Mumbai, Maharashtra",
+      "url": "https://www.google.com/maps/place/Bombay+Coffee+House/data=!4m7!3m6!1s0x3be7c916b18e64f7:0x411a7b22b06f266b!8m2!3d19.0632296!4d72.8347585!16s%2Fg%2F11cmq__vlf!19sChIJ92SOsRbJ5zsRayZvsCJ7GkE?authuser=0&hl=en&rclk=1",
+      "fullAddress": "Neelkamal Building, 248, Waterfield Road, opposite National College, Khar, Bandra West, Mumbai, Maharashtra 400050",
+      "placeId": "0x3be7c916b18e64f7:0x411a7b22b06f266b",
+      "searchString": "Coffee Shop"
+    },
+    {
+      "title": "Blue Tokai Coffee Roasters | Bandra",
+      "totalScore": 4.4,
+      "reviewsCount": 1455,
+      "street": "Shop No 1, No 33, Mayflower Building Perry Road, New Kantwadi Rd, Bandra West",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "postalCode": "400050",
+      "countryCode": null,
+      "website": "stores.bluetokaicoffee.com",
+      "phone": "090825 66400",
+      "categories": [
+        "Cafe"
+      ],
+      "categoryName": "Cafe",
+      "plusCode": "3R6F+5P Mumbai, Maharashtra",
+      "url": "https://www.google.com/maps/place/Blue+Tokai+Coffee+Roasters+%7C+Bandra/data=!4m7!3m6!1s0x3be7c96bae4baaab:0x27f9cc1563722ef4!8m2!3d19.0603995!4d72.8243282!16s%2Fg%2F11g8t_v0r1!19sChIJq6pLrmvJ5zsR9C5yYxXM-Sc?authuser=0&hl=en&rclk=1",
+      "fullAddress": "Shop No 1, No 33, Mayflower Building Perry Road, New Kantwadi Rd, Bandra West, Mumbai, Maharashtra 400050",
+      "placeId": "0x3be7c96bae4baaab:0x27f9cc1563722ef4",
+      "searchString": "Coffee Shop"
+    },
+    {
+      "title": "Bokka Coffee",
+      "totalScore": 4.2,
+      "reviewsCount": 576,
+      "street": "Shop no. 6 and 7, Silver Croft, 16th Rd, near Khane Khas, Bandra West",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "postalCode": "400050",
+      "countryCode": null,
+      "website": null,
+      "phone": "083558 05500",
+      "categories": [
+        "Coffee shop"
+      ],
+      "categoryName": "Coffee shop",
+      "plusCode": "3R8J+78 Mumbai, Maharashtra",
+      "url": "https://www.google.com/maps/place/Bokka+Coffee/data=!4m7!3m6!1s0x3be7c9e567d1d7e7:0xc146a4025025ea1c!8m2!3d19.0656334!4d72.830873!16s%2Fg%2F11svffd5sh!19sChIJ59fRZ-XJ5zsRHOolUAKkRsE?authuser=0&hl=en&rclk=1",
+      "fullAddress": "Shop no. 6 and 7, Silver Croft, 16th Rd, near Khane Khas, Bandra West, Mumbai, Maharashtra 400050",
+      "placeId": "0x3be7c9e567d1d7e7:0xc146a4025025ea1c",
+      "searchString": "Coffee Shop"
+    },
+    {
+      "title": "Boojee Cafe",
+      "totalScore": 4.4,
+      "reviewsCount": 4475,
+      "street": "Shop No 6, 29, New Kantwadi Rd, off Perry Cross Road, Bandra West",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "postalCode": "400050",
+      "countryCode": null,
+      "website": "boojeecafe.com",
+      "phone": "099302 03882",
+      "categories": [
+        "Cafe"
+      ],
+      "categoryName": "Cafe",
+      "plusCode": "3R6F+7R Mumbai, Maharashtra",
+      "url": "https://www.google.com/maps/place/Boojee+Cafe/data=!4m7!3m6!1s0x3be7c950382c58a5:0x31ebdefaca4c2e32!8m2!3d19.0606827!4d72.824591!16s%2Fg%2F11hzhfyyzf!19sChIJpVgsOFDJ5zsRMi5Myvre6zE?authuser=0&hl=en&rclk=1",
+      "fullAddress": "Shop No 6, 29, New Kantwadi Rd, off Perry Cross Road, Bandra West, Mumbai, Maharashtra 400050",
+      "placeId": "0x3be7c950382c58a5:0x31ebdefaca4c2e32",
+      "searchString": "Coffee Shop"
+    },
+    {
+      "title": "Mokai Cafe Chapel Road",
+      "totalScore": 4.3,
+      "reviewsCount": 1468,
+      "street": "600 hill crest Building Ground floor Ambedkar Rd, Pali Mala Rd, near Arvind store, Bandra West",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "postalCode": "400050",
+      "countryCode": null,
+      "website": null,
+      "phone": "098209 83607",
+      "categories": [
+        "Cafe"
+      ],
+      "categoryName": "Cafe",
+      "plusCode": "3R2H+XC Mumbai, Maharashtra",
+      "url": "https://www.google.com/maps/place/Mokai+Cafe+Chapel+Road/data=!4m7!3m6!1s0x3be7c9001fb6e177:0xa52f12f1036bb24e!8m2!3d19.0524259!4d72.8285777!16s%2Fg%2F11vwtj0822!19sChIJd-G2HwDJ5zsRTrJrA_ESL6U?authuser=0&hl=en&rclk=1",
+      "fullAddress": "600 hill crest Building Ground floor Ambedkar Rd, Pali Mala Rd, near Arvind store, Bandra West, Mumbai, Maharashtra 400050",
+      "placeId": "0x3be7c9001fb6e177:0xa52f12f1036bb24e",
+      "searchString": "Coffee Shop"
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "keywords": [
+    "law firm"
+  ],
+  "locations": [
+    "New York, NY, USA"
+  ],
+  "max_results": 5,
+  "results": [
+    {
+      "title": "Maria Mateo PC",
+      "totalScore": 4.8,
+      "reviewsCount": 206,
+      "street": "125-10 Queens Blvd STE 320",
+      "city": "Kew Gardens",
+      "state": "NY",
+      "postalCode": "11415",
+      "countryCode": "US",
+      "website": "https://mariamateolaw.com/",
+      "phone": "+1 718-268-0384",
+      "email": null,
+      "emails": [],
+      "categories": [
+        "Divorce lawyer"
+      ],
+      "categoryName": "Divorce lawyer",
+      "plusCode": "P56F+QF Kew Gardens, Queens, NY, USA",
+      "url": "https://www.google.com/maps/place/Maria+Mateo+PC/data=!4m7!3m6!1s0x89c25e20d3ed9fef:0xca4fd058f294d90c!8m2!3d40.711914!4d-73.826364!16s%2Fg%2F1td2159q!19sChIJ75_t0yBewokRDNmU8ljQT8o?authuser=0&hl=en&rclk=1",
+      "fullAddress": "125-10 Queens Blvd STE 320, Kew Gardens, NY 11415, United States",
+      "placeId": "0x89c25e20d3ed9fef:0xca4fd058f294d90c",
+      "searchString": "law firm"
+    },
+    {
+      "title": "Raphaelson & Levine Law Firm, P.C.",
+      "totalScore": 4.8,
+      "reviewsCount": 714,
+      "street": "14 Pennsylvania Plaza Suite 1718",
+      "city": "New York",
+      "state": "NY",
+      "postalCode": "10122",
+      "countryCode": "US",
+      "website": "https://www.raphaelsonlaw.com/?utm_source=google&utm_medium=organic&utm_campaign=gmb_midtown_manhattan",
+      "phone": "+1 646-960-3476",
+      "email": null,
+      "emails": [],
+      "categories": [
+        "Personal injury attorney"
+      ],
+      "categoryName": "Personal injury attorney",
+      "plusCode": "Q225+P7 New York, USA",
+      "url": "https://www.google.com/maps/place/Raphaelson+%26+Levine+Law+Firm,+P.C./data=!4m7!3m6!1s0x89c259add357548f:0xeaf6e4ad2a5f8043!8m2!3d40.7517816!4d-73.9918095!16s%2Fg%2F1vtqx04l!19sChIJj1RX061ZwokRQ4BfKq3k9uo?authuser=0&hl=en&rclk=1",
+      "fullAddress": "14 Pennsylvania Plaza Suite 1718, New York, NY 10122, United States",
+      "placeId": "0x89c259add357548f:0xeaf6e4ad2a5f8043",
+      "searchString": "law firm"
+    },
+    {
+      "title": "ILGANAYEV LAW FIRM, PLLC",
+      "totalScore": 5.0,
+      "reviewsCount": 124,
+      "street": "139 Fulton St Suite 801",
+      "city": "New York",
+      "state": "NY",
+      "postalCode": "10038",
+      "countryCode": "US",
+      "website": "http://www.ilganayevlaw.com/",
+      "phone": "+1 646-396-8050",
+      "email": null,
+      "emails": [],
+      "categories": [
+        "Law firm"
+      ],
+      "categoryName": "Law firm",
+      "plusCode": "PX6R+5V New York, USA",
+      "url": "https://www.google.com/maps/place/ILGANAYEV+LAW+FIRM,+PLLC/data=!4m7!3m6!1s0x89c25a186b2f5b85:0x59ea9bd9de257987!8m2!3d40.7104617!4d-74.0077673!16s%2Fg%2F11c6ppq56v!19sChIJhVsvaxhawokRh3kl3tmb6lk?authuser=0&hl=en&rclk=1",
+      "fullAddress": "139 Fulton St Suite 801, New York, NY 10038, United States",
+      "placeId": "0x89c25a186b2f5b85:0x59ea9bd9de257987",
+      "searchString": "law firm"
+    },
+    {
+      "title": "The Law Offices of Michael S. Lamonsoff, PLLC",
+      "totalScore": 4.7,
+      "reviewsCount": 573,
+      "street": "32 Old Slip",
+      "city": "New York",
+      "state": "NY",
+      "postalCode": "10005",
+      "countryCode": "US",
+      "website": "https://www.msllegal.com/?utm_source=GMBlisting&utm_medium=organic&utm_campaign=gmb-nyc",
+      "phone": "+1 212-962-1020",
+      "email": null,
+      "emails": [],
+      "categories": [
+        "Personal injury attorney"
+      ],
+      "categoryName": "Personal injury attorney",
+      "plusCode": "PX3R+GQ New York, USA",
+      "url": "https://www.google.com/maps/place/The+Law+Offices+of+Michael+S.+Lamonsoff,+PLLC/data=!4m7!3m6!1s0x89c25a17cf5696eb:0x27c28a1d9b84b09c!8m2!3d40.7037845!4d-74.0080471!16s%2Fg%2F1wn_7073!19sChIJ65ZWzxdawokRnLCEmx2Kwic?authuser=0&hl=en&rclk=1",
+      "fullAddress": "32 Old Slip, New York, NY 10005, United States",
+      "placeId": "0x89c25a17cf5696eb:0x27c28a1d9b84b09c",
+      "searchString": "law firm"
+    },
+    {
+      "title": "Pardalis and Nohavicka Lawyers",
+      "totalScore": 4.8,
+      "reviewsCount": 128,
+      "street": "950 3rd Ave 11th floor",
+      "city": "New York",
+      "state": "NY",
+      "postalCode": "10022",
+      "countryCode": "US",
+      "website": "https://pnlawyers.com/",
+      "phone": "+1 212-213-8511",
+      "email": null,
+      "emails": [],
+      "categories": [
+        "Lawyer"
+      ],
+      "categoryName": "Lawyer",
+      "plusCode": "Q26J+3Q New York, USA",
+      "url": "https://www.google.com/maps/place/Pardalis+and+Nohavicka+Lawyers/data=!4m7!3m6!1s0x89c258e32e3f2751:0xb463a10a805fe02d!8m2!3d40.7602219!4d-73.9680614!16s%2Fg%2F11c0v8fylh!19sChIJUSc_LuNYwokRLeBfgAqhY7Q?authuser=0&hl=en&rclk=1",
+      "fullAddress": "950 3rd Ave 11th floor, New York, NY 10022, United States",
+      "placeId": "0x89c258e32e3f2751:0xb463a10a805fe02d",
+      "searchString": "law firm"
+    }
+  ]
+}

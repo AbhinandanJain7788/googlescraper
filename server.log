@@ -1,0 +1,7 @@
+INFO:     Started server process [19492]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:49871 - "POST /api/scrape HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49872 - "GET /api/jobs/aeda27db-8a51-45f3-8fa4-663e7cebd9e9/stream HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49855 - "GET /api/jobs/aeda27db-8a51-45f3-8fa4-663e7cebd9e9 HTTP/1.1" 200 OK

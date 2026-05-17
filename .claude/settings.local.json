@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:github.com)",
+      "Bash(bun --version)",
+      "Bash(python -m pip install --quiet playwright fastapi \"uvicorn[standard]\" python-multipart)",
+      "Bash(python -m playwright install chromium)",
+      "Bash(python smoke_test.py)",
+      "Bash(python -m app.scraper \"Gold Jewellery\" \"Raipur, Chhattisgarh, India\" 3)",
+      "Bash(curl -s -X POST http://127.0.0.1:8000/api/scrape -H \"Content-Type: application/json\" -d '{\"keyword\":\"Coffee Shop\",\"location\":\"Bandra, Mumbai\",\"max_results\":5}')",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('status:',d['status'],'count:',d['results_count']\\); [print\\(' -',r.get\\('title'\\),'|',r.get\\('phone'\\),'|',r.get\\('website'\\)\\) for r in d['results']]\")",
+      "Bash(kill 207)",
+      "Bash(python -m pip install --quiet httpx)",
+      "Bash(python -c ' *)",
+      "Bash(python -c \"import playwright; import httpx; print\\('ok'\\)\")",
+      "Bash(python perf_test.py)",
+      "Bash(python perf_test_big.py)",
+      "Bash(rm -rf /tmp/gmscraper-test)",
+      "Bash(mkdir -p /tmp/gmscraper-test)",
+      "Read(//tmp/**)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" --max-time 2 http://127.0.0.1:8765/api/health)",
+      "Bash(DATA_DIR=/tmp/gmscraper-test python -m uvicorn app.main:app --port 8765 --log-level info)",
+      "Bash(curl -s http://127.0.0.1:8765/api/jobs)",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); [print\\(f'{j[\\\\\"id\\\\\"][:8]} status={j[\\\\\"status\\\\\"]} keywords={j[\\\\\"keywords\\\\\"]} results_count={j[\\\\\"results_count\\\\\"]}'\\) for j in d['jobs']]\")",
+      "Bash(python -c \"import sqlite3; print\\(sqlite3.connect\\('C:/Users/Abhin/AppData/Local/Temp/gmscraper-test/jobs.db'\\).execute\\('SELECT id, status FROM jobs'\\).fetchall\\(\\)\\)\")",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); [print\\(f'{j[\\\\\"id\\\\\"][:8]} status={j[\\\\\"status\\\\\"]} keywords={j[\\\\\"keywords\\\\\"]}'\\) for j in d['jobs']]\")",
+      "Bash(curl -s -o /tmp/r1.txt -w \"HTTP %{http_code}\\\\n\" -X DELETE http://127.0.0.1:8765/api/jobs)",
+      "Bash(curl -s -X DELETE 'http://127.0.0.1:8765/api/jobs?confirm=true')",
+      "Bash(rm -rf /tmp/gmscraper-test /tmp/last_job_id.txt /tmp/r1.txt 2>&1; echo \"cleanup done\")"
+    ],
+    "additionalDirectories": [
+      "\\tmp"
+    ]
+  }
+}

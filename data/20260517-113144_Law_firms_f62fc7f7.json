@@ -1,0 +1,57 @@
+{
+  "keywords": [
+    "Law firms"
+  ],
+  "locations": [
+    "New York , Usa"
+  ],
+  "max_results": 10000,
+  "results": [
+    {
+      "title": "The Law Offices of Michael S. Lamonsoff, PLLC",
+      "totalScore": 4.7,
+      "reviewsCount": 573,
+      "street": "32 Old Slip",
+      "city": "New York",
+      "state": "NY",
+      "postalCode": "10005",
+      "countryCode": "US",
+      "website": "https://www.msllegal.com/?utm_source=GMBlisting&utm_medium=organic&utm_campaign=gmb-nyc",
+      "phone": "+1 212-962-1020",
+      "email": null,
+      "emails": [],
+      "categories": [
+        "Personal injury attorney"
+      ],
+      "categoryName": "Personal injury attorney",
+      "plusCode": "PX3R+GQ New York, USA",
+      "url": "https://www.google.com/maps/place/The+Law+Offices+of+Michael+S.+Lamonsoff,+PLLC/data=!4m7!3m6!1s0x89c25a17cf5696eb:0x27c28a1d9b84b09c!8m2!3d40.7037845!4d-74.0080471!16s%2Fg%2F1wn_7073!19sChIJ65ZWzxdawokRnLCEmx2Kwic?authuser=0&hl=en&rclk=1",
+      "fullAddress": "32 Old Slip, New York, NY 10005, United States",
+      "placeId": "0x89c25a17cf5696eb:0x27c28a1d9b84b09c",
+      "searchString": "Law firms"
+    },
+    {
+      "title": "Pardalis and Nohavicka Lawyers",
+      "totalScore": 4.8,
+      "reviewsCount": null,
+      "street": null,
+      "city": null,
+      "state": null,
+      "postalCode": null,
+      "countryCode": "US",
+      "website": null,
+      "phone": null,
+      "email": null,
+      "emails": [],
+      "categories": [
+        "Law firm"
+      ],
+      "categoryName": "Law firm",
+      "plusCode": null,
+      "url": "https://www.google.com/maps/place/Pardalis+and+Nohavicka+Lawyers/data=!4m7!3m6!1s0x89c258e32e3f2751:0xb463a10a805fe02d!8m2!3d40.7602219!4d-73.9680614!16s%2Fg%2F11c0v8fylh!19sChIJUSc_LuNYwokRLeBfgAqhY7Q?authuser=0&hl=en&rclk=1",
+      "fullAddress": null,
+      "placeId": "0x89c258e32e3f2751:0xb463a10a805fe02d",
+      "searchString": "Law firms"
+    }
+  ]
+}

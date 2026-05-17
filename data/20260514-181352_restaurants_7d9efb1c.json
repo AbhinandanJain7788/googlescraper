@@ -1,0 +1,427 @@
+{
+  "keyword": "restaurants",
+  "location": "Raipur Chattisgardh india",
+  "max_results": 20,
+  "results": [
+    {
+      "title": "Girnar Restaurant",
+      "totalScore": 4.1,
+      "reviewsCount": 4159,
+      "street": "6JVP+F3G, GE Road Opp Ravi Bhawan, Jaistambh Chowk, Moudhapara",
+      "city": "Raipur",
+      "state": "Chhattisgarh",
+      "postalCode": "492001",
+      "countryCode": "IN",
+      "website": null,
+      "phone": "077125 34776",
+      "categories": [
+        "Biryani restaurant"
+      ],
+      "categoryName": "Biryani restaurant",
+      "plusCode": null,
+      "url": "https://www.google.com/maps/place/Girnar+Restaurant/data=!4m7!3m6!1s0x3a28dd97e0294b2b:0xa60271f3535d0bff!8m2!3d21.2437391!4d81.6352159!16s%2Fg%2F1tdq8_fw!19sChIJK0sp4JfdKDoR_wtdU_NxAqY?authuser=0&hl=en&rclk=1",
+      "fullAddress": "6JVP+F3G, GE Road Opp Ravi Bhawan, Jaistambh Chowk, Moudhapara, Raipur, Chhattisgarh 492001",
+      "placeId": "0x3a28dd97e0294b2b:0xa60271f3535d0bff",
+      "searchString": "restaurants"
+    },
+    {
+      "title": "KOYA Raipur",
+      "totalScore": 4.7,
+      "reviewsCount": 2090,
+      "street": "Kachna Rd, Saddu",
+      "city": "Raipur",
+      "state": "Chhattisgarh",
+      "postalCode": "492014",
+      "countryCode": "IN",
+      "website": null,
+      "phone": "090390 79993",
+      "categories": [
+        "Restaurant"
+      ],
+      "categoryName": "Restaurant",
+      "plusCode": "7MFW+FV Raipur, Chhattisgarh",
+      "url": "https://www.google.com/maps/place/KOYA+Raipur/data=!4m7!3m6!1s0x3a28e9005f2734a5:0x600595a49824bc23!8m2!3d21.2737409!4d81.6972091!16s%2Fg%2F11y68dcf5k!19sChIJpTQnXwDpKDoRI7wkmKSVBWA?authuser=0&hl=en&rclk=1",
+      "fullAddress": "Kachna Rd, Saddu, Raipur, Chhattisgarh 492014",
+      "placeId": "0x3a28e9005f2734a5:0x600595a49824bc23",
+      "searchString": "restaurants"
+    },
+    {
+      "title": "Gadh Kalewa, Raipur",
+      "totalScore": 4.3,
+      "reviewsCount": 8275,
+      "street": "Gaurav Path, Civil Lines",
+      "city": "Raipur",
+      "state": "Chhattisgarh",
+      "postalCode": "492001",
+      "countryCode": "IN",
+      "website": "gadhkalewa.in",
+      "phone": "097137 40888",
+      "categories": [
+        "Indian restaurant"
+      ],
+      "categoryName": "Indian restaurant",
+      "plusCode": "6JVV+QX Raipur, Chhattisgarh",
+      "url": "https://www.google.com/maps/place/Gadh+Kalewa,+Raipur/data=!4m7!3m6!1s0x3a28dd9f81fc174d:0xc2adc8b14e2a6e6!8m2!3d21.2444234!4d81.644926!16s%2Fg%2F11ckkydg7q!19sChIJTRf8gZ_dKDoR5qbiFIvcKgw?authuser=0&hl=en&rclk=1",
+      "fullAddress": "Gaurav Path, Civil Lines, Raipur, Chhattisgarh 492001",
+      "placeId": "0x3a28dd9f81fc174d:0xc2adc8b14e2a6e6",
+      "searchString": "restaurants"
+    },
+    {
+      "title": "Godwit Cafe | Best Cafes in Raipur | Best Jain food in Raipur | Pure Veg restaurant",
+      "totalScore": 4.4,
+      "reviewsCount": 2606,
+      "street": "In Front Hyatt, beside Magneto Mall, Jivan Vihar",
+      "city": "Raipur",
+      "state": "Chhattisgarh",
+      "postalCode": "492001",
+      "countryCode": "IN",
+      "website": "godwitcafe.com",
+      "phone": "092946 10000",
+      "categories": [
+        "Vegetarian restaurant"
+      ],
+      "categoryName": "Vegetarian restaurant",
+      "plusCode": "6MRM+3V Raipur, Chhattisgarh",
+      "url": "https://www.google.com/maps/place/Godwit+Cafe+%7C+Best+Cafes+in+Raipur+%7C+Best+Jain+food+in+Raipur+%7C+Pure+Veg+restaurant/data=!4m7!3m6!1s0x3a28ddc4e4ed671b:0x917a8b3df184f41c!8m2!3d21.2401706!4d81.6846408!16s%2Fg%2F11h0ylk6wh!19sChIJG2ft5MTdKDoRHPSE8T2LepE?authuser=0&hl=en&rclk=1",
+      "fullAddress": "In Front Hyatt, beside Magneto Mall, Jivan Vihar, Raipur, Chhattisgarh 492001",
+      "placeId": "0x3a28ddc4e4ed671b:0x917a8b3df184f41c",
+      "searchString": "restaurants"
+    },
+    {
+      "title": "KOPYKO Sunset Grill",
+      "totalScore": 4.4,
+      "reviewsCount": 1263,
+      "street": "VIP Rd, behind Hotel Grand Canyon, Fundahar",
+      "city": "Raipur",
+      "state": "Chhattisgarh",
+      "postalCode": "492001",
+      "countryCode": "IN",
+      "website": null,
+      "phone": "082978 80000",
+      "categories": [
+        "Restaurant"
+      ],
+      "categoryName": "Restaurant",
+      "plusCode": "6MGX+7X Raipur, Chhattisgarh",
+      "url": "https://www.google.com/maps/place/KOPYKO+Sunset+Grill/data=!4m7!3m6!1s0x3a28c3b9ce6b8b5f:0x1e56f1e5609fe26a!8m2!3d21.2257123!4d81.6998807!16s%2Fg%2F11vf9hf0xp!19sChIJX4trzrnDKDoRauKfYOXxVh4?authuser=0&hl=en&rclk=1",
+      "fullAddress": "VIP Rd, behind Hotel Grand Canyon, Fundahar, Raipur, Chhattisgarh 492001",
+      "placeId": "0x3a28c3b9ce6b8b5f:0x1e56f1e5609fe26a",
+      "searchString": "restaurants"
+    },
+    {
+      "title": "Pind Balluchi Restaurant & Bar",
+      "totalScore": 4.4,
+      "reviewsCount": 1382,
+      "street": "VIP Rd, near Soul Garden, Vishal Nagar",
+      "city": "Raipur",
+      "state": "Chhattisgarh",
+      "postalCode": "492001",
+      "countryCode": "IN",
+      "website": "instagram.com",
+      "phone": "078800 81112",
+      "categories": [
+        "Punjabi restaurant"
+      ],
+      "categoryName": "Punjabi restaurant",
+      "plusCode": "6MHJ+VP Raipur, Chhattisgarh",
+      "url": "https://www.google.com/maps/place/Pind+Balluchi+Restaurant+%26+Bar/data=!4m7!3m6!1s0x3a28c378040df43f:0x921954fc93adf125!8m2!3d21.2296375!4d81.6817831!16s%2Fg%2F11trhxgc74!19sChIJP_QNBHjDKDoRJfGtk_xUGZI?authuser=0&hl=en&rclk=1",
+      "fullAddress": "VIP Rd, near Soul Garden, Vishal Nagar, Raipur, Chhattisgarh 492001",
+      "placeId": "0x3a28c378040df43f:0x921954fc93adf125",
+      "searchString": "restaurants"
+    },
+    {
+      "title": "Raipur Restaurant",
+      "totalScore": 4.4,
+      "reviewsCount": 1382,
+      "street": "VIP Rd, near Soul Garden, Vishal Nagar",
+      "city": "Raipur",
+      "state": "Chhattisgarh",
+      "postalCode": "492001",
+      "countryCode": "IN",
+      "website": "instagram.com",
+      "phone": "078800 81112",
+      "categories": [
+        "Punjabi restaurant"
+      ],
+      "categoryName": "Punjabi restaurant",
+      "plusCode": "6MHJ+VP Raipur, Chhattisgarh",
+      "url": "https://www.google.com/maps/place/Raipur+Restaurant/data=!4m7!3m6!1s0x3a28de08ce6a7e03:0x5d063f1b94a765f5!8m2!3d21.2358719!4d81.6009189!16s%2Fg%2F11gf85nr53!19sChIJA35qzgjeKDoR9WWnlBs_Bl0?authuser=0&hl=en&rclk=1",
+      "fullAddress": "VIP Rd, near Soul Garden, Vishal Nagar, Raipur, Chhattisgarh 492001",
+      "placeId": "0x3a28de08ce6a7e03:0x5d063f1b94a765f5",
+      "searchString": "restaurants"
+    },
+    {
+      "title": "Gourmet Restaurant, Raipur",
+      "totalScore": 4.5,
+      "reviewsCount": 548,
+      "street": "C/o Hotel Celebration, Jail Road Shri Gurugovind S. Square",
+      "city": "Raipur",
+      "state": "Chhattisgarh",
+      "postalCode": "492001",
+      "countryCode": "IN",
+      "website": "celebrationworld.in",
+      "phone": "077140 92992",
+      "categories": [
+        "North Indian restaurant"
+      ],
+      "categoryName": "North Indian restaurant",
+      "plusCode": "7J4P+JR Raipur, Chhattisgarh",
+      "url": "https://www.google.com/maps/place/Gourmet+Restaurant,+Raipur/data=!4m7!3m6!1s0x3a28dd855cc9764b:0x844dc392d644993e!8m2!3d21.256513!4d81.6370527!16s%2Fg%2F11byygbl0p!19sChIJS3bJXIXdKDoRPplE1pLDTYQ?authuser=0&hl=en&rclk=1",
+      "fullAddress": "C/o Hotel Celebration, Jail Road Shri Gurugovind S. Square, Raipur, Chhattisgarh 492001",
+      "placeId": "0x3a28dd855cc9764b:0x844dc392d644993e",
+      "searchString": "restaurants"
+    },
+    {
+      "title": "Manju Mamta Restaurant",
+      "totalScore": 4.5,
+      "reviewsCount": 548,
+      "street": "C/o Hotel Celebration, Jail Road Shri Gurugovind S. Square",
+      "city": "Raipur",
+      "state": "Chhattisgarh",
+      "postalCode": "492001",
+      "countryCode": "IN",
+      "website": "celebrationworld.in",
+      "phone": "077140 92992",
+      "categories": [
+        "North Indian restaurant"
+      ],
+      "categoryName": "North Indian restaurant",
+      "plusCode": "7J4P+JR Raipur, Chhattisgarh",
+      "url": "https://www.google.com/maps/place/Manju+Mamta+Restaurant/data=!4m7!3m6!1s0x3a28dd97d3c53a21:0x5fadabe6d66f2173!8m2!3d21.2441368!4d81.6337039!16s%2Fg%2F11cjpx3278!19sChIJITrF05fdKDoRcyFv1uarrV8?authuser=0&hl=en&rclk=1",
+      "fullAddress": "C/o Hotel Celebration, Jail Road Shri Gurugovind S. Square, Raipur, Chhattisgarh 492001",
+      "placeId": "0x3a28dd97d3c53a21:0x5fadabe6d66f2173",
+      "searchString": "restaurants"
+    },
+    {
+      "title": "Sangria, Raipur",
+      "totalScore": 4.2,
+      "reviewsCount": 1205,
+      "street": "Sangria, A wing, 9th floor, Babylon Tower VIP Square, NH- 06",
+      "city": "Raipur",
+      "state": "Chhattisgarh",
+      "postalCode": "492001",
+      "countryCode": "IN",
+      "website": "instagram.com",
+      "phone": "078800 33440",
+      "categories": [
+        "Restaurant"
+      ],
+      "categoryName": "Restaurant",
+      "plusCode": "6MQH+RR Raipur, Chhattisgarh",
+      "url": "https://www.google.com/maps/place/Sangria,+Raipur/data=!4m7!3m6!1s0x3a28ddaa2408ab91:0x1422d044e7d4c0a7!8m2!3d21.2396041!4d81.6795326!16s%2Fg%2F11tt28b718!19sChIJkasIJKrdKDoRp8DU50TQIhQ?authuser=0&hl=en&rclk=1",
+      "fullAddress": "Sangria, A wing, 9th floor, Babylon Tower VIP Square, NH- 06, Raipur, Chhattisgarh 492001",
+      "placeId": "0x3a28ddaa2408ab91:0x1422d044e7d4c0a7",
+      "searchString": "restaurants"
+    },
+    {
+      "title": "Lemon Tadka",
+      "totalScore": 4.4,
+      "reviewsCount": 486,
+      "street": "Inside Hotel Le Roi Complex, City Railway Station",
+      "city": "Raipur",
+      "state": "Chhattisgarh",
+      "postalCode": "492009",
+      "countryCode": "IN",
+      "website": null,
+      "phone": "077730 13035",
+      "categories": [
+        "Fast food restaurant"
+      ],
+      "categoryName": "Fast food restaurant",
+      "plusCode": "7J4H+6Q Raipur, Chhattisgarh",
+      "url": "https://www.google.com/maps/place/Lemon+Tadka/data=!4m7!3m6!1s0x3a28dd2899a7c8c3:0xdd56395842520f37!8m2!3d21.2555852!4d81.629435!16s%2Fg%2F11sbxvxd_8!19sChIJw8inmSjdKDoRNw9SQlg5Vt0?authuser=0&hl=en&rclk=1",
+      "fullAddress": "Inside Hotel Le Roi Complex, City Railway Station, Raipur, Chhattisgarh 492009",
+      "placeId": "0x3a28dd2899a7c8c3:0xdd56395842520f37",
+      "searchString": "restaurants"
+    },
+    {
+      "title": "Asian Bistro Raipur",
+      "totalScore": 4.4,
+      "reviewsCount": 457,
+      "street": "Daga Marg, near Central Indian Turf Farm Pvt.Ltd, Sheodas, Civil Lines",
+      "city": "Raipur",
+      "state": "Chhattisgarh",
+      "postalCode": "492001",
+      "countryCode": "IN",
+      "website": null,
+      "phone": "093706 53188",
+      "categories": [
+        "Asian restaurant"
+      ],
+      "categoryName": "Asian restaurant",
+      "plusCode": "6JRV+X7 Raipur, Chhattisgarh",
+      "url": "https://www.google.com/maps/place/Asian+Bistro+Raipur/data=!4m7!3m6!1s0x3a28ddeddd1b63c5:0x6e0627f291773347!8m2!3d21.2424956!4d81.643202!16s%2Fg%2F11trc2l_r3!19sChIJxWMb3e3dKDoRRzN3kfInBm4?authuser=0&hl=en&rclk=1",
+      "fullAddress": "Daga Marg, near Central Indian Turf Farm Pvt.Ltd, Sheodas, Civil Lines, Raipur, Chhattisgarh 492001",
+      "placeId": "0x3a28ddeddd1b63c5:0x6e0627f291773347",
+      "searchString": "restaurants"
+    },
+    {
+      "title": "Jalaram Open Kitchen",
+      "totalScore": 4.2,
+      "reviewsCount": 2422,
+      "street": "Raipur - Bilaspur Expy, Nahar Para, Police Colony, Moudhapara",
+      "city": "Raipur",
+      "state": "Chhattisgarh",
+      "postalCode": "492001",
+      "countryCode": "IN",
+      "website": null,
+      "phone": "070678 33248",
+      "categories": [
+        "South Indian restaurant"
+      ],
+      "categoryName": "South Indian restaurant",
+      "plusCode": "7J4P+CC Raipur, Chhattisgarh",
+      "url": "https://www.google.com/maps/place/Jalaram+Open+Kitchen/data=!4m7!3m6!1s0x3a28dd8ff968518f:0x35b1be6c8579eaa0!8m2!3d21.256027!4d81.6360145!16s%2Fg%2F11g6_xm0v5!19sChIJj1Fo-Y_dKDoRoOp5hWy-sTU?authuser=0&hl=en&rclk=1",
+      "fullAddress": "Raipur - Bilaspur Expy, Nahar Para, Police Colony, Moudhapara, Raipur, Chhattisgarh 492001",
+      "placeId": "0x3a28dd8ff968518f:0x35b1be6c8579eaa0",
+      "searchString": "restaurants"
+    },
+    {
+      "title": "Iraa",
+      "totalScore": 4.2,
+      "reviewsCount": 2422,
+      "street": "Raipur - Bilaspur Expy, Nahar Para, Police Colony, Moudhapara",
+      "city": "Raipur",
+      "state": "Chhattisgarh",
+      "postalCode": "492001",
+      "countryCode": "IN",
+      "website": null,
+      "phone": "070678 33248",
+      "categories": [
+        "South Indian restaurant"
+      ],
+      "categoryName": "South Indian restaurant",
+      "plusCode": "7J4P+CC Raipur, Chhattisgarh",
+      "url": "https://www.google.com/maps/place/Iraa/data=!4m7!3m6!1s0x3a28e81926ebdc15:0x6cd65e3812e03bff!8m2!3d21.2783845!4d81.7102685!16s%2Fg%2F11f_p2pn0k!19sChIJFdzrJhnoKDoR_zvgEjhe1mw?authuser=0&hl=en&rclk=1",
+      "fullAddress": "Raipur - Bilaspur Expy, Nahar Para, Police Colony, Moudhapara, Raipur, Chhattisgarh 492001",
+      "placeId": "0x3a28e81926ebdc15:0x6cd65e3812e03bff",
+      "searchString": "restaurants"
+    },
+    {
+      "title": "Anise pure veg Restaurant-",
+      "totalScore": 4.2,
+      "reviewsCount": 2422,
+      "street": "Raipur - Bilaspur Expy, Nahar Para, Police Colony, Moudhapara",
+      "city": "Raipur",
+      "state": "Chhattisgarh",
+      "postalCode": "492001",
+      "countryCode": "IN",
+      "website": null,
+      "phone": "070678 33248",
+      "categories": [
+        "South Indian restaurant"
+      ],
+      "categoryName": "South Indian restaurant",
+      "plusCode": "7J4P+CC Raipur, Chhattisgarh",
+      "url": "https://www.google.com/maps/place/Anise+pure+veg+Restaurant-/data=!4m7!3m6!1s0x3a28dd524402b255:0x4f2c96b29a61e72d!8m2!3d21.26187!4d81.6373847!16s%2Fg%2F11rhdw6mh4!19sChIJVbICRFLdKDoRLedhmrKWLE8?authuser=0&hl=en&rclk=1",
+      "fullAddress": "Raipur - Bilaspur Expy, Nahar Para, Police Colony, Moudhapara, Raipur, Chhattisgarh 492001",
+      "placeId": "0x3a28dd524402b255:0x4f2c96b29a61e72d",
+      "searchString": "restaurants"
+    },
+    {
+      "title": "MUSK Restaurant & Patisserie",
+      "totalScore": 4.3,
+      "reviewsCount": 394,
+      "street": "Above State Bank Of India, Fafadih, Near Pilla Building",
+      "city": "Raipur",
+      "state": "Chhattisgarh",
+      "postalCode": "492009",
+      "countryCode": "IN",
+      "website": "aniseraipur.com",
+      "phone": "088179 70977",
+      "categories": [
+        "North Indian restaurant"
+      ],
+      "categoryName": "North Indian restaurant",
+      "plusCode": "7J6P+PX Raipur, Chhattisgarh",
+      "url": "https://www.google.com/maps/place/MUSK+Restaurant+%26+Patisserie/data=!4m7!3m6!1s0x3a28dd9789a3d4e5:0xe852420a34a1960f!8m2!3d21.255679!4d81.6455597!16s%2Fg%2F11wfkfmy06!19sChIJ5dSjiZfdKDoRD5ahNApCUug?authuser=0&hl=en&rclk=1",
+      "fullAddress": "Above State Bank Of India, Fafadih, Near Pilla Building, Raipur, Chhattisgarh 492009",
+      "placeId": "0x3a28dd9789a3d4e5:0xe852420a34a1960f",
+      "searchString": "restaurants"
+    },
+    {
+      "title": "Raasta Raipur",
+      "totalScore": 4.3,
+      "reviewsCount": 394,
+      "street": "Above State Bank Of India, Fafadih, Near Pilla Building",
+      "city": "Raipur",
+      "state": "Chhattisgarh",
+      "postalCode": "492009",
+      "countryCode": "IN",
+      "website": "aniseraipur.com",
+      "phone": "088179 70977",
+      "categories": [
+        "North Indian restaurant"
+      ],
+      "categoryName": "North Indian restaurant",
+      "plusCode": "7J6P+PX Raipur, Chhattisgarh",
+      "url": "https://www.google.com/maps/place/Raasta+Raipur/data=!4m7!3m6!1s0x3a28dda55c5bdcd9:0x6d1a2424e600d8cf!8m2!3d21.2388574!4d81.6832554!16s%2Fg%2F11wtt_yffn!19sChIJ2dxbXKXdKDoRz9gA5iQkGm0?authuser=0&hl=en&rclk=1",
+      "fullAddress": "Above State Bank Of India, Fafadih, Near Pilla Building, Raipur, Chhattisgarh 492009",
+      "placeId": "0x3a28dda55c5bdcd9:0x6d1a2424e600d8cf",
+      "searchString": "restaurants"
+    },
+    {
+      "title": "Ocellus Multi Cuisine Restaurant",
+      "totalScore": 4.3,
+      "reviewsCount": 394,
+      "street": "Above State Bank Of India, Fafadih, Near Pilla Building",
+      "city": "Raipur",
+      "state": "Chhattisgarh",
+      "postalCode": "492009",
+      "countryCode": "IN",
+      "website": "aniseraipur.com",
+      "phone": "088179 70977",
+      "categories": [
+        "North Indian restaurant"
+      ],
+      "categoryName": "North Indian restaurant",
+      "plusCode": "7J6P+PX Raipur, Chhattisgarh",
+      "url": "https://www.google.com/maps/place/Ocellus+Multi+Cuisine+Restaurant/data=!4m7!3m6!1s0x3a28dd98061cd623:0x9bedaa78b048bdd7!8m2!3d21.2434778!4d81.6375557!16s%2Fg%2F1ptxm86wf!19sChIJI9YcBpjdKDoR171IsHiq7Zs?authuser=0&hl=en&rclk=1",
+      "fullAddress": "Above State Bank Of India, Fafadih, Near Pilla Building, Raipur, Chhattisgarh 492009",
+      "placeId": "0x3a28dd98061cd623:0x9bedaa78b048bdd7",
+      "searchString": "restaurants"
+    },
+    {
+      "title": "Flavours The Restaurant",
+      "totalScore": 4.3,
+      "reviewsCount": 394,
+      "street": "Above State Bank Of India, Fafadih, Near Pilla Building",
+      "city": "Raipur",
+      "state": "Chhattisgarh",
+      "postalCode": "492009",
+      "countryCode": "IN",
+      "website": "aniseraipur.com",
+      "phone": "088179 70977",
+      "categories": [
+        "North Indian restaurant"
+      ],
+      "categoryName": "North Indian restaurant",
+      "plusCode": "7J6P+PX Raipur, Chhattisgarh",
+      "url": "https://www.google.com/maps/place/Flavours+The+Restaurant/data=!4m7!3m6!1s0x3a28dd70aafb4d9d:0xc298ae8e8c4a46a6!8m2!3d21.256228!4d81.652951!16s%2Fg%2F11b7q8gw8m!19sChIJnU37qnDdKDoRpkZKjI6umMI?authuser=0&hl=en&rclk=1",
+      "fullAddress": "Above State Bank Of India, Fafadih, Near Pilla Building, Raipur, Chhattisgarh 492009",
+      "placeId": "0x3a28dd70aafb4d9d:0xc298ae8e8c4a46a6",
+      "searchString": "restaurants"
+    },
+    {
+      "title": "Suruchi Thali Restaurant And Caterers",
+      "totalScore": 4.3,
+      "reviewsCount": 394,
+      "street": "Above State Bank Of India, Fafadih, Near Pilla Building",
+      "city": "Raipur",
+      "state": "Chhattisgarh",
+      "postalCode": "492009",
+      "countryCode": "IN",
+      "website": "aniseraipur.com",
+      "phone": "088179 70977",
+      "categories": [
+        "North Indian restaurant"
+      ],
+      "categoryName": "North Indian restaurant",
+      "plusCode": "7J6P+PX Raipur, Chhattisgarh",
+      "url": "https://www.google.com/maps/place/Suruchi+Thali+Restaurant+And+Caterers/data=!4m7!3m6!1s0x3a28ddbd58776b65:0xab0082560958de63!8m2!3d21.243645!4d81.635012!16s%2Fg%2F11csb2126v!19sChIJZWt3WL3dKDoRY95YCVaCAKs?authuser=0&hl=en&rclk=1",
+      "fullAddress": "Above State Bank Of India, Fafadih, Near Pilla Building, Raipur, Chhattisgarh 492009",
+      "placeId": "0x3a28ddbd58776b65:0xab0082560958de63",
+      "searchString": "restaurants"
+    }
+  ]
+}

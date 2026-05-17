@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Saved Jobs — Google Maps Lead Scraper</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <style>
+    .toolbar { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 14px; flex-wrap: wrap; }
+    .toolbar .left { display: flex; gap: 10px; align-items: center; }
+    .toolbar .right { display: flex; gap: 10px; align-items: center; }
+    .badge { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+    .badge.running    { background: rgba(79,140,255,0.15);  color: var(--accent); }
+    .badge.pending    { background: rgba(250,204,21,0.15);  color: var(--yellow); }
+    .badge.done       { background: rgba(74,222,128,0.15);  color: var(--green); }
+    .badge.error      { background: rgba(248,113,113,0.15); color: var(--red); }
+    .badge.cancelled  { background: rgba(138,147,166,0.18); color: var(--muted); }
+    .badge.interrupted{ background: rgba(248,113,113,0.15); color: var(--red); }
+    .jobs-table th, .jobs-table td { vertical-align: top; }
+    .jobs-table .small { color: var(--muted); font-size: 11px; }
+    .jobs-table .actions a, .jobs-table .actions button {
+      display: inline-block; margin-right: 6px; padding: 4px 10px; font-size: 12px;
+      border-radius: 6px; border: 1px solid var(--border); background: #0c0f14;
+      color: var(--text); text-decoration: none; cursor: pointer;
+    }
+    .jobs-table .actions a:hover, .jobs-table .actions button:hover { border-color: var(--accent); }
+    .jobs-table .actions .danger { color: var(--red); border-color: rgba(248,113,113,0.3); }
+    .jobs-table .actions .danger:hover { background: rgba(248,113,113,0.08); }
+    .empty { color: var(--muted); padding: 24px; text-align: center; }
+    .progress-mini { width: 120px; height: 4px; background: #0c0f14; border-radius: 999px; overflow: hidden; margin-top: 4px; }
+    .progress-mini > div { height: 100%; background: var(--accent); transition: width 0.3s ease; }
+    .refresh-info { color: var(--muted); font-size: 11px; }
+    .nav-links { display: flex; gap: 14px; }
+    .nav-links a { color: var(--accent); text-decoration: none; font-size: 13px; }
+    .nav-links a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Saved Jobs</h1>
+    <p class="sub">All jobs ever submitted on this server. Persisted to SQLite — survives restarts. Files live under <code>data/</code>.</p>
+  </header>
+
+  <main>
+    <section class="panel">
+      <div class="toolbar">
+        <div class="left">
+          <div class="nav-links">
+            <a href="/">&larr; Back to scraper</a>
+          </div>
+        </div>
+        <div class="right">
+          <span class="refresh-info" id="refresh-info">Auto-refresh every 5s</span>
+          <button id="refresh" type="button">Refresh now</button>
+          <button id="delete-all" type="button" class="danger" style="background: transparent; border: 1px solid rgba(248,113,113,0.4); color: var(--red);">Delete all</button>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="jobs-table" id="tbl">
+          <thead>
+            <tr>
+              <th>Job</th>
+              <th>Query</th>
+              <th>Status</th>
+              <th>Leads</th>
+              <th>Started</th>
+              <th>Finished</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+            <tr><td colspan="7" class="empty">Loading…</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>
+      Click <strong>Open</strong> to see live progress (for running jobs) or the saved results (for completed jobs).
+      Delete a job to free its disk space — the JSON, CSV, and DB row all go.
+    </small>
+  </footer>
+
+  <script src="/static/dashboard.js"></script>
+</body>
+</html>

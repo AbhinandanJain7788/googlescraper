@@ -1,0 +1,22 @@
+# Keep the Docker build context small and free of secrets/junk.
+.git
+.gitignore
+__pycache__
+*.pyc
+*.pyo
+.venv
+venv
+env
+.env
+.env.*
+.idea
+.vscode
+*.log
+server.log
+data/
+*.db
+*.db-wal
+*.db-shm
+perf_test*.py
+README*.md
+.DS_Store

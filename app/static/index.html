@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Google Maps Lead Scraper</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header>
+    <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:16px; flex-wrap:wrap;">
+      <div>
+        <h1>Google Maps Lead Scraper</h1>
+        <p class="sub">Free. No API key. Saves CSV + JSON locally. Stays inside the city/region you typed.</p>
+      </div>
+      <div style="padding-top:8px;">
+        <a href="/dashboard" style="color:var(--accent); text-decoration:none; font-size:13px;">Saved Jobs &rarr;</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel">
+      <form id="form">
+        <div class="row two-col">
+          <label class="col">
+            <span>Keywords <em>*</em> <small>(one per line for multiple)</small></span>
+            <textarea id="keyword" name="keyword" rows="3" placeholder="Gold Jewellery&#10;Diamond Showroom" required></textarea>
+          </label>
+          <label class="col">
+            <span>Location <small>(one per line)</small></span>
+            <textarea id="location" name="location" rows="3" placeholder="Raipur, Chhattisgarh, India"></textarea>
+          </label>
+        </div>
+        <div class="row">
+          <label class="narrow">
+            <span>Total leads</span>
+            <input id="max_results" name="max_results" type="number" min="1" max="10000" value="1000" />
+          </label>
+          <label class="narrow">
+            <span>Grid (NxN, auto)</span>
+            <input id="grid_size" type="number" min="1" max="15" placeholder="auto" />
+          </label>
+          <label class="check">
+            <input id="restrict_to_location" type="checkbox" checked />
+            <span title="Use the city/region's real administrative boundary (from OpenStreetMap) and discard any place outside it.">Stay inside this city/region</span>
+          </label>
+          <label class="check">
+            <input id="auto_grid" type="checkbox" checked />
+            <span title="Tile the area into an NxN grid of viewport searches to break past Google's ~120-per-query cap.">Auto-scan area</span>
+          </label>
+          <label class="check">
+            <input id="fetch_emails" type="checkbox" checked />
+            <span>Fetch emails</span>
+          </label>
+          <button id="go" type="submit">Search</button>
+          <button id="stop" type="button" disabled>Stop</button>
+        </div>
+        <p class="hint">
+          <strong>How this gets every business in a city, end to end:</strong>
+          Google Maps caps any single search at ~120 results then shows "You've reached the end of the list" &mdash; there are no pages to flip through. To pull every match in a city, the scraper (a) looks up the city's real administrative bounding box from OpenStreetMap, (b) tiles that box into an N&times;N grid of map-viewport searches, (c) merges results and de-duplicates by Google place ID, and (d) <em>discards any place whose coordinates fall outside the city box</em>. So if you type "Raipur, Chhattisgarh, India", you get only Raipur businesses &mdash; no Punjab, no Haryana, no neighbouring states. If you ask for 1000 leads but the city only has 240 jewellers, you get 240. The cap is the city, not your number.
+        </p>
+      </form>
+
+      <div class="status" id="status">Idle.</div>
+      <div class="progress" id="progress"><div class="bar" id="bar"></div></div>
+    </section>
+
+    <section class="panel results" hidden id="results-wrap">
+      <div class="results-header">
+        <h2>Results <span class="count" id="count">0</span></h2>
+        <div class="actions">
+          <a id="dl-json" class="btn" href="#" download>Download JSON</a>
+          <a id="dl-csv"  class="btn" href="#" download>Download CSV</a>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table id="tbl">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Title</th>
+              <th>Rating</th>
+              <th>Reviews</th>
+              <th>Category</th>
+              <th>Phone</th>
+              <th>Email</th>
+              <th>Website</th>
+              <th>City</th>
+              <th>State</th>
+              <th>Pin</th>
+              <th>Address</th>
+              <th>Maps</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>
+      Data is stored locally in <code>data/</code> (CSV + JSON, one file per job).
+      Bounding box comes from OpenStreetMap (Nominatim); coordinates per place come from Google's URLs.
+    </small>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
