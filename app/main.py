@@ -97,6 +97,7 @@ async def _run_scrape(job: Job) -> None:
                 pass
 
     def on_status(msg: str) -> None:
+        print(f"[scrape {job.id[:8]}] {msg}", flush=True)
         loop.call_soon_threadsafe(job.queue.put_nowait, {"type": "status", "data": msg})
 
     try:
