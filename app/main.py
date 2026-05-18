@@ -53,8 +53,8 @@ class Job:
     radius_km: float = 20.0  # fallback only, used when OSM has no bbox
     grid_size: Optional[int] = None
     zoom: int = 14
-    tile_workers: int = 3   # how many tiles/contexts to scrape in parallel
-    card_workers: int = 5   # how many detail pages to extract in parallel per tile
+    tile_workers: int = 2   # how many tiles/contexts to scrape in parallel
+    card_workers: int = 3   # how many detail pages to extract in parallel per tile
     status: str = "pending"  # pending | running | done | error | cancelled
     error: Optional[str] = None
     started_at: float = field(default_factory=time.time)
@@ -199,8 +199,8 @@ class ScrapeRequest(BaseModel):
     # `radius_km` is now a fallback only: used when OSM can't return a bbox for the typed location.
     # Hard-capped to 25 km in the scraper regardless of what is sent.
     radius_km: float = Field(20.0, ge=0.5, le=25.0, description="fallback half-side of scan square in km, used when OSM has no bbox")
-    tile_workers: int = Field(3, ge=1, le=8, description="number of grid tiles scraped in parallel")
-    card_workers: int = Field(5, ge=1, le=10, description="number of detail pages extracted in parallel per tile")
+    tile_workers: int = Field(2, ge=1, le=8, description="number of grid tiles scraped in parallel")
+    card_workers: int = Field(3, ge=1, le=10, description="number of detail pages extracted in parallel per tile")
 
 
 # ---------- app ----------

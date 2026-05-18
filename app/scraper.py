@@ -489,7 +489,19 @@ class GoogleMapsScraper:
         self._pw = await async_playwright().start()
         self._browser = await self._pw.chromium.launch(
             headless=self.headless,
-            args=["--lang=en-US", "--disable-blink-features=AutomationControlled"],
+            args=[
+                "--lang=en-US",
+                "--disable-blink-features=AutomationControlled",
+                # Docker / container-safety flags. Without these Chromium
+                # SIGSEGVs on Railway because /dev/shm is only 64MB by default
+                # and the user-namespace sandbox isn't always available.
+                "--no-sandbox",
+                "--disable-dev-shm-usage",
+                "--disable-gpu",
+                "--disable-software-rasterizer",
+                "--disable-extensions",
+                "--no-zygote",
+            ],
         )
         self._http = httpx.AsyncClient(
             headers={
