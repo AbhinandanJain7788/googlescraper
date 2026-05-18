@@ -524,16 +524,29 @@ class GoogleMapsScraper:
         return self
 
     async def __aexit__(self, exc_type, exc, tb) -> None:
+        # Best-effort cleanup. If Chromium has already died (OOM kill, SIGSEGV,
+        # transport closed) calling .close() / .stop() will raise — swallow
+        # those errors so a long-running job's partial results still land
+        # cleanly instead of being marked status=error.
         try:
             if self._http:
-                await self._http.aclose()
+                try:
+                    await self._http.aclose()
+                except Exception:
+                    pass
         finally:
             try:
                 if self._browser:
-                    await self._browser.close()
+                    try:
+                        await self._browser.close()
+                    except Exception as e:
+                        print(f"[scraper] browser.close failed (ignored): {type(e).__name__}: {e}", flush=True)
             finally:
                 if self._pw:
-                    await self._pw.stop()
+                    try:
+                        await self._pw.stop()
+                    except Exception as e:
+                        print(f"[scraper] playwright.stop failed (ignored): {type(e).__name__}: {e}", flush=True)
 
     async def _new_context(self) -> BrowserContext:
         assert self._browser is not None
@@ -1138,16 +1151,28 @@ class GoogleMapsScraper:
         # parallelizes card processing too, so effective concurrency is
         # tile_workers * card_workers detail pages at once.
         sem = asyncio.Semaphore(max(1, tile_workers))
+        # Early-bail state: count consecutive tiles that returned zero new
+        # leads. If we've tried EARLY_BAIL_TILES tiles AND still have zero
+        # collected, abort — the location is almost certainly bad (country
+        # name, typo, middle-of-nowhere). Prevents the "Australia" / typo
+        # case grinding for 10+ minutes returning nothing.
+        zero_runs = {"n": 0}
+        EARLY_BAIL_TILES = 6
+        # `cancel_event` may be None when called from the CLI/library. Make
+        # sure we always have one so the bail logic can signal abort.
+        if cancel_event is None:
+            cancel_event = asyncio.Event()
 
         async def _run_target(i: int, t: _Target) -> None:
             async with sem:
-                if cancel_event and cancel_event.is_set():
+                if cancel_event.is_set():
                     return
                 remaining = max_results - len(collected)
                 if remaining <= 0:
                     return
                 if on_status:
                     on_status(f"[{i}/{len(targets)}] {t.label()} — have {len(collected)} so far")
+                pre_count = len(collected)
                 try:
                     await self._scrape_one_query(
                         target=t,
@@ -1160,6 +1185,19 @@ class GoogleMapsScraper:
                 except Exception as e:  # one tile failing must not kill the whole job
                     if on_status:
                         on_status(f"[{i}/{len(targets)}] FAILED: {type(e).__name__}: {e}")
+                added = len(collected) - pre_count
+                if added == 0:
+                    zero_runs["n"] += 1
+                    if len(collected) == 0 and zero_runs["n"] >= EARLY_BAIL_TILES:
+                        if on_status:
+                            on_status(
+                                f"Aborting: {zero_runs['n']} tiles returned zero leads. "
+                                f"The location '{t.location or '<empty>'}' is probably too broad "
+                                f"or misspelled. Try a specific city name."
+                            )
+                        cancel_event.set()
+                else:
+                    zero_runs["n"] = 0
 
         await asyncio.gather(*[_run_target(i + 1, t) for i, t in enumerate(targets)])
         return collected
