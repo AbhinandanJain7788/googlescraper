@@ -1157,7 +1157,7 @@ class GoogleMapsScraper:
         # name, typo, middle-of-nowhere). Prevents the "Australia" / typo
         # case grinding for 10+ minutes returning nothing.
         zero_runs = {"n": 0}
-        EARLY_BAIL_TILES = 6
+        EARLY_BAIL_TILES = 3
         # `cancel_event` may be None when called from the CLI/library. Make
         # sure we always have one so the bail logic can signal abort.
         if cancel_event is None:
