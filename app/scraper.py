@@ -303,8 +303,13 @@ def _auto_grid_size(max_results: int) -> int:
         return 1
     if max_results <= 200:
         return 2  # 2x2 = 4 viewports + 1 text-search target
-    n = math.ceil(math.sqrt(max_results / 80))
-    return max(2, min(int(n), 12))  # cap at 12x12 = 144 tiles
+    n = math.ceil(math.sqrt(max_results / 120))
+    # Cap at 4x4 = 16 tiles. Anything beyond saturates Railway's 1GB RAM:
+    # accumulated browser-context memory bloat across many tiles freezes the
+    # entire web server (asyncio event loop starves; /api/health stops
+    # responding). For users on bigger boxes who want more, expose grid_size
+    # explicitly in the request.
+    return max(2, min(int(n), 4))
 
 
 @dataclass
