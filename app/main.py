@@ -73,7 +73,7 @@ class Job:
         return self.locations[0] if self.locations else ""
 
 
-JOBS: dict[str, Job] = {}
+JOBS: dict[str, Job] = {}  # live in-memory jobs; wiped on container restart
 
 
 async def _run_scrape(job: Job) -> None:
