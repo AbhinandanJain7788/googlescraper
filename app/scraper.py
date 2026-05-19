@@ -554,29 +554,39 @@ class GoogleMapsScraper:
                         print(f"[scraper] playwright.stop failed (ignored): {type(e).__name__}: {e}", flush=True)
 
     async def _recycle_browser(self) -> None:
-        """Close and relaunch the Chromium process to release accumulated
-        memory between tile batches. Must be called only when no contexts
-        are open (i.e. between scrape batches). Without this, long jobs
-        bloat Chromium past Railway's 1GB RAM limit and freeze the server.
+        """Fully restart Playwright + Chromium to release accumulated memory.
+        On Railway's 1GB instance, the Playwright DRIVER process itself
+        (not just Chromium) can hit memory limits after many tiles — when
+        that happens, even `browser.launch` raises 'transport closed'.
+        So we tear down everything and re-init.
+
+        Must be called only when no contexts are open (between batches).
         """
-        if self._pw is None:
-            return
-        old = self._browser
+        old_browser = self._browser
+        old_pw = self._pw
         self._browser = None
-        if old is not None:
+        self._pw = None
+
+        # Best-effort teardown of the old stack. All errors swallowed — the
+        # whole point of recycling is to recover from a broken stack.
+        if old_browser is not None:
             try:
-                await old.close()
-            except Exception as e:
-                print(f"[scraper] recycle: old browser.close failed (ignored): {type(e).__name__}: {e}", flush=True)
-        try:
-            self._browser = await self._pw.chromium.launch(
-                headless=self.headless,
-                args=list(_CHROMIUM_ARGS),
-            )
-            print("[scraper] browser recycled — memory released", flush=True)
-        except Exception as e:
-            print(f"[scraper] recycle: launch failed: {type(e).__name__}: {e}", flush=True)
-            raise
+                await old_browser.close()
+            except Exception:
+                pass
+        if old_pw is not None:
+            try:
+                await old_pw.stop()
+            except Exception:
+                pass
+
+        # Fresh start.
+        self._pw = await async_playwright().start()
+        self._browser = await self._pw.chromium.launch(
+            headless=self.headless,
+            args=list(_CHROMIUM_ARGS),
+        )
+        print("[scraper] playwright + browser recycled — memory released", flush=True)
 
     async def _new_context(self) -> BrowserContext:
         assert self._browser is not None
@@ -1234,7 +1244,7 @@ class GoogleMapsScraper:
         # Chromium process gradually bloats (handle/RPC accumulation). Past
         # ~10 tiles on Railway's 1GB instance the process freezes the whole
         # asyncio loop. Closing+relaunching releases all that memory.
-        RECYCLE_EVERY = max(1, tile_workers * 4)  # e.g. tile_workers=2 → every 8 tiles
+        RECYCLE_EVERY = max(1, tile_workers * 2)  # e.g. tile_workers=2 → every 4 tiles
         for batch_start in range(0, len(targets), RECYCLE_EVERY):
             if cancel_event.is_set():
                 break
