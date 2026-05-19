@@ -303,13 +303,15 @@ def _auto_grid_size(max_results: int) -> int:
         return 1
     if max_results <= 200:
         return 2  # 2x2 = 4 viewports + 1 text-search target
+    if max_results <= 1000:
+        return 3  # 3x3 = 9 viewports — good for mid-size cities
     n = math.ceil(math.sqrt(max_results / 120))
-    # Cap at 4x4 = 16 tiles. Anything beyond saturates Railway's 1GB RAM:
-    # accumulated browser-context memory bloat across many tiles freezes the
-    # entire web server (asyncio event loop starves; /api/health stops
-    # responding). For users on bigger boxes who want more, expose grid_size
-    # explicitly in the request.
-    return max(2, min(int(n), 4))
+    # Cap at 6x6 = 36 tiles. Coupled with the browser-recycle loop in
+    # scrape() (close+relaunch Chromium every N tiles) this stays within
+    # Railway's 1GB RAM. The user wants exhaustive coverage of a city
+    # ("give me all 800 law firms in Sydney"), so we push the grid wide
+    # to fully tile dense urban areas; dedup by place ID handles overlap.
+    return max(2, min(int(n), 6))
 
 
 @dataclass
@@ -481,6 +483,21 @@ async def _fetch_emails_from_site(
 ScrapeCallback = Callable[[dict], None]
 
 
+_CHROMIUM_ARGS = [
+    "--lang=en-US",
+    "--disable-blink-features=AutomationControlled",
+    # Docker / container-safety flags. Without these Chromium SIGSEGVs on
+    # Railway because /dev/shm is only 64MB by default and the user-namespace
+    # sandbox isn't always available.
+    "--no-sandbox",
+    "--disable-dev-shm-usage",
+    "--disable-gpu",
+    "--disable-software-rasterizer",
+    "--disable-extensions",
+    "--no-zygote",
+]
+
+
 class GoogleMapsScraper:
     def __init__(self, headless: bool = True, lang: str = "en", fetch_emails: bool = True):
         self.headless = headless
@@ -494,19 +511,7 @@ class GoogleMapsScraper:
         self._pw = await async_playwright().start()
         self._browser = await self._pw.chromium.launch(
             headless=self.headless,
-            args=[
-                "--lang=en-US",
-                "--disable-blink-features=AutomationControlled",
-                # Docker / container-safety flags. Without these Chromium
-                # SIGSEGVs on Railway because /dev/shm is only 64MB by default
-                # and the user-namespace sandbox isn't always available.
-                "--no-sandbox",
-                "--disable-dev-shm-usage",
-                "--disable-gpu",
-                "--disable-software-rasterizer",
-                "--disable-extensions",
-                "--no-zygote",
-            ],
+            args=list(_CHROMIUM_ARGS),
         )
         self._http = httpx.AsyncClient(
             headers={
@@ -547,6 +552,31 @@ class GoogleMapsScraper:
                         await self._pw.stop()
                     except Exception as e:
                         print(f"[scraper] playwright.stop failed (ignored): {type(e).__name__}: {e}", flush=True)
+
+    async def _recycle_browser(self) -> None:
+        """Close and relaunch the Chromium process to release accumulated
+        memory between tile batches. Must be called only when no contexts
+        are open (i.e. between scrape batches). Without this, long jobs
+        bloat Chromium past Railway's 1GB RAM limit and freeze the server.
+        """
+        if self._pw is None:
+            return
+        old = self._browser
+        self._browser = None
+        if old is not None:
+            try:
+                await old.close()
+            except Exception as e:
+                print(f"[scraper] recycle: old browser.close failed (ignored): {type(e).__name__}: {e}", flush=True)
+        try:
+            self._browser = await self._pw.chromium.launch(
+                headless=self.headless,
+                args=list(_CHROMIUM_ARGS),
+            )
+            print("[scraper] browser recycled — memory released", flush=True)
+        except Exception as e:
+            print(f"[scraper] recycle: launch failed: {type(e).__name__}: {e}", flush=True)
+            raise
 
     async def _new_context(self) -> BrowserContext:
         assert self._browser is not None
@@ -1199,7 +1229,30 @@ class GoogleMapsScraper:
                 else:
                     zero_runs["n"] = 0
 
-        await asyncio.gather(*[_run_target(i + 1, t) for i, t in enumerate(targets)])
+        # Process targets in batches and recycle Chromium between batches.
+        # WHY: each tile creates a fresh BrowserContext, but the underlying
+        # Chromium process gradually bloats (handle/RPC accumulation). Past
+        # ~10 tiles on Railway's 1GB instance the process freezes the whole
+        # asyncio loop. Closing+relaunching releases all that memory.
+        RECYCLE_EVERY = max(1, tile_workers * 4)  # e.g. tile_workers=2 → every 8 tiles
+        for batch_start in range(0, len(targets), RECYCLE_EVERY):
+            if cancel_event.is_set():
+                break
+            batch = targets[batch_start:batch_start + RECYCLE_EVERY]
+            await asyncio.gather(*[
+                _run_target(batch_start + j + 1, t) for j, t in enumerate(batch)
+            ])
+            # Recycle between batches only (not after the final batch).
+            if not cancel_event.is_set() and (batch_start + RECYCLE_EVERY) < len(targets):
+                if len(collected) < max_results:
+                    if on_status:
+                        on_status(f"Recycling browser to free memory ({len(collected)}/{max_results} so far)…")
+                    try:
+                        await self._recycle_browser()
+                    except Exception as e:
+                        if on_status:
+                            on_status(f"Browser recycle failed: {type(e).__name__}: {e}")
+                        break  # can't continue without a browser
         return collected
 
 
