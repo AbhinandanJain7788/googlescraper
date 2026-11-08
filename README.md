@@ -51,3 +51,11 @@ Prints a JSON array of leads to stdout.
 - Google may rate-limit a single IP after a few hundred queries in quick succession. For personal use this isn't a problem. If you hit a soft block, wait a few minutes or restart your router.
 - Selectors can drift if Google ships UI changes. If a field stops populating, update the relevant block in `app/scraper.py` (look for `_extract_detail_panel`).
 - This scrapes only what Google Maps publicly shows to logged-out users.
+
+## Responsible use
+
+This tool automates a browser against Google Maps. Automated scraping may conflict with Google's Terms of Service, and scraped data can include business contact details. Use it for personal research or small-scale lead lists, respect rate limits, and follow the data-protection laws that apply to you (e.g. GDPR, India's DPDP Act).
+
+## License
+
+MIT, see [LICENSE](LICENSE).

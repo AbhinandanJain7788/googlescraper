@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+.env
+.env.*
+
+# Scraped output, job database and logs (generated at runtime)
+data/
+*.db
+*.db-wal
+*.db-shm
+*.log
+
+# Local tool / editor config
+.claude/
+.idea/
+.vscode/
+.DS_Store
